@@ -3,7 +3,7 @@
     <head>
         <title>My Recipe Book</title>
         <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="font-awesome/css/all.css">
     </head>
@@ -34,12 +34,13 @@
             })
 
             .then(function(data){
+              var output = "";
               for(a = 0; a < data.length; a++){
                 output += `
                 <a href="show-recipe.html?id=${data[a].id}">
                   <div class="meals-list-item">
-                    <h1>${data[a].title}<i class="fas fa-chevron-circles-right"></i></h1>
-                    <p>${data[a].discription}</p>
+                    <h1>${data[a].title}<i class="fas fa-chevron-circle-right"></i></h1>
+                    <p>${data[a].description}</p>
                   </div>
                 </a>
                 `;
